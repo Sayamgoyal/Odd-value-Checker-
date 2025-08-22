@@ -1,4 +1,4 @@
-var1 = [2,3,4,6,8] 
+var1 = ['orange',1,2,3,4] 
 def quantity_less_than_one(var1):
     var2 = [] 
     for j in var1: 
@@ -23,4 +23,8 @@ def odd_value(var1):
             if var1[j] != var2[k]:
                 print(var1[j])
                 break
-odd_value(var1)
+def OddStringChecker(var1):
+    min_value_string = min(var1, key=var1.count)
+    print(min_value_string)
+        
+OddStringChecker(var1)
