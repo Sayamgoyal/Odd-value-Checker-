@@ -1,4 +1,4 @@
-var1 = ['orange',1,2,3,4] 
+var1 = ['orange',"apple","banana"] 
 def quantity_less_than_one(var1):
     var2 = [] 
     for j in var1: 
@@ -26,5 +26,32 @@ def odd_value(var1):
 def OddStringChecker(var1):
     min_value_string = min(var1, key=var1.count)
     print(min_value_string)
-        
-OddStringChecker(var1)
+def OddIntChecker(var1):
+    for i in var1:
+        if type(i) == type('string'):
+            continue
+        if type(i) == type(1):
+            print(i)
+            
+def Analyzer(var1):
+    try:
+        quantity_less_than_one(var1)
+    except:
+        print("NoAnomalyError")
+    try:
+        quantity_more_than_one(var1)
+    except:
+        print("NoAnomalyError")
+    try:
+        odd_value(var1)
+    except:
+        print("NoAnomalyError")
+    try:
+        OddStringChecker(var1)
+    except:
+        print("NoAnomalyError")
+    try:
+        OddIntChecker(var1)
+    except:
+        print("NoAnomalyError")
+Analyzer(var1)
